@@ -128,6 +128,10 @@ include vendor/arrow/config/fonts.mk
 # Packages
 include vendor/arrow/config/packages.mk
 
+# Navigation
+PRODUCT_PACKAGES += \
+    ImmersiveNavigationOverlay   
+
 # Props
 include vendor/arrow/config/props.mk
 
