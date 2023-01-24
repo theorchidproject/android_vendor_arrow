@@ -11,6 +11,10 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+# Allow vendor/extra to override any property by setting it first
+
+$(call inherit-product-if-exists, vendor/bromite_system_inline/bromite.mk)
+
 
 include vendor/arrow/config/version.mk
 
