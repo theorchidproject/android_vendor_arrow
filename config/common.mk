@@ -13,6 +13,7 @@
 # limitations under the License.
 # Allow vendor/extra to override any property by setting it first
 
+$(call inherit-product, vendor/config/orchidos.mk)
 $(call inherit-product-if-exists, vendor/bromite_system_inline/bromite.mk)
 $(call inherit-product-if-exists, vendor/lawnchair/lawnchair.mk)
 
@@ -21,6 +22,9 @@ include vendor/arrow/config/version.mk
 
 PRODUCT_PACKAGE_OVERLAYS += \
     vendor/arrow/overlay/common
+
+# Build Patch
+PRODUCT_BROKEN_VERIFY_USES_LIBRARIES:= true
 
 PRODUCT_PACKAGE_OVERLAYS += \
     vendor/arrow/overlay/themes/ArrowIcons
