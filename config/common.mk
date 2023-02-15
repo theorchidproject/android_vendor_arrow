@@ -13,6 +13,7 @@
 # limitations under the License.
 # Allow vendor/extra to override any property by setting it first
 
+$(call inherit-product, vendor/lineage/addons/OrchidOsPrebuilts/config.mk)
 $(call inherit-product, vendor/config/orchidos.mk)
 $(call inherit-product-if-exists, vendor/bromite_system_inline/bromite.mk)
 $(call inherit-product-if-exists, vendor/lawnchair/lawnchair.mk)
